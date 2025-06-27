@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  background: url('../assets/background.jpg') center/cover no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#desktop {
+  position: absolute;
+  inset: 0;
+}
+
+.desktop-icon {
+  width: 64px;
+  text-align: center;
+  margin: 10px;
+  cursor: default;
+}
+
+.window {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 400px;
+  border: 2px solid #333;
+  background: white;
+  z-index: 10;
+}
+
+.title-bar {
+  background: #1a57c1;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: move;
+}
+
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: rgba(26, 87, 193, 0.4); 
+  backdrop-filter: blur(6px);               
+  -webkit-backdrop-filter: blur(6px);       
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#start-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: url('../assets/icons/start.png') no-repeat center center;
+  background-size: contain;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#start-button:hover {
+  filter: brightness(1.1);
+}
+
+#start-menu {
+  display: none;
+  position: fixed;
+  bottom: 45px;
+  left: 10px;
+  width: 220px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 10px;
+  z-index: 1000;
+}
+
+#start-menu.visible {
+  display: block;
+}
+
+.start-header {
+  font-weight: bold;
+  color: #1a57c1;
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.start-apps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.start-apps li {
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.start-apps li:hover {
+  background-color: rgba(26, 87, 193, 0.1);
+}
