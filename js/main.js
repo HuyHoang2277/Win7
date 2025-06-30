@@ -1,9 +1,5 @@
-import { createTaskbar } from './taskbar.js';
-import { createStartMenu } from './startMenu.js';
-import { createDesktop } from './desktop.js';
+import { initStartMenu } from './startMenu.js';
+import { initClock } from './clock.js';
 
-window.addEventListener('DOMContentLoaded', () => {
-  createTaskbar();
-  createStartMenu();
-  createDesktop();
-});
+initClock();
+initStartMenu();

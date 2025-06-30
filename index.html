@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="/style/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Win7 Clone</title>
+  <link rel="stylesheet" href="style/main.css" />
 </head>
 <body>
-    <div id="desktop"></div>
-    <div id="taskbar"></div>
-    <script type="module" src="js/main.js"></script>
+  <div id="desktop"></div>
+
+  <div id="taskbar">
+  <button id="start-button"></button>
+  <div id="taskbar-icons">
+  </div>
+  <div id="taskbar-clock">
+    <div id="clock-time"></div>
+    <div id="clock-date"></div>
+  </div>
+</div>
+
+  <div id="start-menu" class="start-menu hidden">
+        <div class="start-left">
+            <ul class="start-apps">
+            <li><img src="assets/icons/snipping.png"> Snipping Tool</li>
+            <li><img src="assets/icons/gettingstarted.png"> Getting Started</li>
+            <li><img src="assets/icons/wmc.png"> Windows Media Center</li>
+            <li><img src="assets/icons/calc.png"> Calculator</li>
+            <li><img src="assets/icons/notes.png"> Sticky Notes</li>
+            <li><img src="assets/icons/paint.png"> Paint</li>
+            </ul>
+        </div>
+        <div class="start-right">
+            <ul>
+            <li>Documents</li>
+            <li>Pictures</li>
+            <li>Music</li>
+            <li>Games</li>
+            <li>Computer</li>
+            <li>Control Panel</li>
+            <li>Devices and Printers</li>
+            <li>Default Programs</li>
+            <li>Help and Support</li>
+            </ul>
+        </div>
+        <div class="start-footer">
+            <input type="text" placeholder="Search programs and files..." />
+            <button id="shutdown-btn">Shut Down</button>
+        </div>
+    </div>
+
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
