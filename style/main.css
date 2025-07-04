@@ -220,7 +220,6 @@ body {
   background-color: rgba(53, 110, 140, 1);
 }
 
-
 .desktop-icon {
   width: 60px;
   display: flex;
@@ -237,5 +236,25 @@ body {
   width: 32px;
   height: 32px;
   margin-bottom: 4px;
+}
+
+#taskbar-icons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.taskbar-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px;
+  transition: background 0.2s;
+}
+
+.taskbar-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 

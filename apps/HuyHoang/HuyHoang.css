@@ -3,6 +3,7 @@
   top: 120px;
   left: 100px;
   width: 480px;
+  height: 540px;
   background: white;
   border: 1px solid #999;
   border-radius: 6px;
@@ -53,41 +54,96 @@
 }
 
 .myself-body {
+  flex: 1;
+  overflow-y: auto;
+  background-image: url(/assets/backgroudhuyhoang.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
+  padding: 20px;
   font-family: 'Segoe UI', sans-serif;
 }
 
+.myself-body::-webkit-scrollbar {
+  width: 2px;
+}
+
+.myself-body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
 .myself-body img {
-  height: 200px;
-  width: 200px;
+  height: 160px;
+  width: 160px;
   object-fit: cover;
   border-radius: 6px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .myself-body h3 {
-  margin: 8px 0;
-  font-size: 18px;
+  margin: 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.myself-body ul {
+.bio {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #222;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.link-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0;
+  text-align: center;
 }
 
-.myself-body ul li {
+.link-list li {
   margin: 6px 0;
 }
 
-.myself-body ul li a {
-  color: #1a57c1;
+.link-list li a {
+  color: #761bab;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
 }
 
-.myself-body ul li a:hover {
+.link-list li a:hover {
   text-decoration: underline;
+}
+
+.myself-body h4 {
+  margin: 8px 0 0px;
+  font-size: 17px;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #111;
+  font-weight: 500;
+  text-align: center;
+}
+
+.edu-list li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }

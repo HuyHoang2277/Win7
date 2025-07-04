@@ -1,5 +1,11 @@
 let currentZIndex = 300;
 
+export function bringToFront(windowEl) {
+  document.querySelectorAll('.window').forEach(w => w.classList.remove('active'));
+  windowEl.classList.add('active');
+  windowEl.style.zIndex = ++currentZIndex;
+}
+
 export function makeWindowDraggable(windowEl) {
   const titleBar = windowEl.querySelector('.title-bar');
   let isDragging = false, offsetX = 0, offsetY = 0;
@@ -59,15 +65,8 @@ export function makeWindowResizable(windowEl) {
   });
 }
 
-function bringToFront(windowEl) {
-  document.querySelectorAll('.window').forEach(w => w.classList.remove('active'));
-  windowEl.classList.add('active');
-  windowEl.style.zIndex = ++currentZIndex;
-}
-
 export function makeIconDraggable(iconEl) {
   let isDragging = false, offsetX = 0, offsetY = 0;
-
   iconEl.style.position = 'absolute';
 
   iconEl.addEventListener('mousedown', (e) => {
@@ -88,4 +87,24 @@ export function makeIconDraggable(iconEl) {
   document.addEventListener('mouseup', () => {
     isDragging = false;
   });
+}
+
+export function addToTaskbar(appId, iconSrc, windowEl) {
+  const taskbar = document.getElementById('taskbar-icons');
+
+  if (document.querySelector(`.taskbar-icon[data-app="${appId}"]`)) return;
+
+  const icon = document.createElement('img');
+  icon.src = iconSrc;
+  icon.classList.add('taskbar-icon');
+  icon.dataset.app = appId;
+
+  icon.addEventListener('click', () => {
+    if (windowEl.style.display === 'none') {
+      windowEl.style.display = 'flex';
+    }
+    bringToFront(windowEl);
+  });
+
+  taskbar.appendChild(icon);
 }
