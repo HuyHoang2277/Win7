@@ -5,9 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Win7 Clone</title>
   <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="apps/notepad/notepad.css">
+  <link rel="stylesheet" href="apps/HuyHoang/HuyHoang.css">
 </head>
 <body>
-  <div id="desktop"></div>
+  <div id="desktop">
+    <div id="Computer" class="desktop-icon">
+      <img src="assets/icons/imageres_109.ico" />
+      <span>HuyHoang</span>
+    </div>
+    <div id="Exploder" class="desktop-icon">
+      <img src="assets/icons/explorer_ICO_MYCOMPUTER.ico" />
+      <span>Exploder</span>
+    </div>
+    <div id="notepad-icon" class="desktop-icon">
+      <img src="assets/icons/notepad_2.ico" alt="Notepad">
+      <span>Notepad</span>
+    </div>
+    <div id="paint-icon" class="desktop-icon">
+      <img src="assets/icons/mspaint_2.ico" />
+      <span>Paint</span>
+    </div>
+    <div id="web" class="desktop-icon">
+      <img src="assets/icons/iexplore_32528.ico" />
+      <span>IE</span>
+    </div>
+    <div id="music" class="desktop-icon">
+      <img src="assets/icons/DXPTaskRingtone_50.ico" />
+      <span>Music</span>
+    </div>
+  </div>
+
 
   <div id="taskbar">
   <button id="start-button"></button>
@@ -19,37 +47,10 @@
   </div>
 </div>
 
-  <div id="start-menu" class="start-menu hidden">
-        <div class="start-left">
-            <ul class="start-apps">
-            <li><img src="assets/icons/snipping.png"> Snipping Tool</li>
-            <li><img src="assets/icons/gettingstarted.png"> Getting Started</li>
-            <li><img src="assets/icons/wmc.png"> Windows Media Center</li>
-            <li><img src="assets/icons/calc.png"> Calculator</li>
-            <li><img src="assets/icons/notes.png"> Sticky Notes</li>
-            <li><img src="assets/icons/paint.png"> Paint</li>
-            </ul>
-        </div>
-        <div class="start-right">
-            <ul>
-            <li>Documents</li>
-            <li>Pictures</li>
-            <li>Music</li>
-            <li>Games</li>
-            <li>Computer</li>
-            <li>Control Panel</li>
-            <li>Devices and Printers</li>
-            <li>Default Programs</li>
-            <li>Help and Support</li>
-            </ul>
-        </div>
-        <div class="start-footer">
-            <input type="text" placeholder="Search programs and files..." />
-            <button id="shutdown-btn">Shut Down</button>
-        </div>
-    </div>
-
+  <div id="start-menu"></div>
 
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
+
+

@@ -55,8 +55,8 @@ body {
 }
 
 #taskbar-clock {
-    margin: 10px;
   margin-left: auto;
+  margin-right: 5px;
   color: white;
   font-size: 13px;
   padding: 4px 12px;
@@ -76,66 +76,166 @@ body {
   font-size: 11px;
 }
 
-.start-menu {
+#start-menu {
   display: none;
+  flex-direction: column;
+  width: 500px;
+  height: 550px;
+  background-color: rgba(26, 87, 193, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 10px;
   position: fixed;
   bottom: 50px;
   left: 10px;
-  width: 600px;
-  height: 400px;
-  background: linear-gradient(to right, #fdfdfd, #dbe7ff);
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  z-index: 1000;
-  font-family: 'Segoe UI', sans-serif;
+  z-index: 200;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+  gap: 10px;
 }
 
-.start-left, .start-right {
-  padding: 10px;
-  overflow-y: auto;
+#start-menu.visible {
+  display: flex;
+}
+
+.start-body {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  height: 100%;
 }
 
 .start-left {
   width: 60%;
-  border-right: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .start-right {
   width: 40%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(26, 87, 193, 0.2));
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
-.start-apps li,
-.start-right li {
-  padding: 6px;
-  cursor: pointer;
+.start-apps {
+  flex: 1;
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.start-apps li {
+  padding: 6px 8px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
-.start-apps li:hover,
-.start-right li:hover {
-  background-color: rgba(26, 87, 193, 0.1);
+.start-apps li:hover {
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .start-apps img {
   width: 20px;
   height: 20px;
+  object-fit: contain;
 }
 
 .start-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-top: 1px solid #ccc;
-  padding: 5px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #eee;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.start-footer input {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.start-right ul {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.start-right li {
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.start-right li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.shutdown-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#shutdown-btn {
+  padding: 6px 16px;
+  background-color: rgba(53, 110, 140, 0.25);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#shutdown-btn:hover {
+  background-color: rgba(53, 110, 140, 1);
+}
+
+
+.desktop-icon {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.desktop-icon img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
 }
 

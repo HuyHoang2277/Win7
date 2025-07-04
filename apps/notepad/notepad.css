@@ -1,0 +1,95 @@
+.window {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  width: 500px;
+  height: 400px;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 300;
+  transition: box-shadow 0.2s ease;
+}
+
+.window.active {
+  box-shadow: 0 0 14px rgba(26, 87, 193, 0.6);
+  border-color: #1a57c1;
+}
+
+
+
+.title-bar {
+  background: linear-gradient(to bottom, #1a57c1, #12479a);
+  color: white;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  height: 30px;
+  user-select: none;
+  cursor: move;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 2px;
+}
+
+.window-body {
+  flex: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-body textarea {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  padding: 4px;
+  background-color: white;
+  color: black;
+}
+
+.notepad_bar {
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  font-size: 13px;
+  font-family: 'Segoe UI', sans-serif;
+  user-select: none;
+}
+
+.notepad_bar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.notepad_bar ul li {
+  list-style-type: none;
+  cursor: default;
+  padding: 2px 4px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.notepad_bar ul li:hover {
+  background-color: #e0e0e0;
+}

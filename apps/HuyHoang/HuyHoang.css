@@ -1,0 +1,93 @@
+.myself-window {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  width: 480px;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 300;
+  transition: box-shadow 0.2s ease;
+}
+
+.window.active {
+  box-shadow: 0 0 14px rgba(26, 87, 193, 0.6);
+  border-color: #1a57c1;
+}
+
+.myself-bar {
+  background: linear-gradient(to bottom, #1a57c1, #12479a);
+  color: white;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  height: 30px;
+  user-select: none;
+  cursor: move;
+}
+
+.myself-bar span {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+.close-btn:hover {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 2px;
+}
+
+.myself-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.myself-body img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.myself-body h3 {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.myself-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.myself-body ul li {
+  margin: 6px 0;
+}
+
+.myself-body ul li a {
+  color: #1a57c1;
+  text-decoration: none;
+}
+
+.myself-body ul li a:hover {
+  text-decoration: underline;
+}
