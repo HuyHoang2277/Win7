@@ -98,7 +98,7 @@ export function addToTaskbar(appId, iconSrc, windowEl) {
   icon.src = iconSrc;
   icon.classList.add('taskbar-icon');
   icon.dataset.app = appId;
-
+  
   icon.addEventListener('click', () => {
     if (windowEl.style.display === 'none') {
       windowEl.style.display = 'flex';

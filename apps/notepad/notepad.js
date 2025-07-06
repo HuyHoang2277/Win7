@@ -23,8 +23,8 @@ export function launchNotepad() {
   }
 
   const windowHTML = `
-    <div class="window" id="notepad-window">
-      <div class="title-bar">
+    <div class="window notepad-window" id="notepad-window">
+      <div class="title-bar notepad-bar">
         <span>Notepad</span>
         <button class="close-btn">✕</button>
       </div>
@@ -37,7 +37,7 @@ export function launchNotepad() {
           <li>Help</li>
         </ul>
       </div>
-      <div class="window-body">
+      <div class="notepad-body">
         <textarea placeholder="Start typing..." autofocus></textarea>
       </div>
     </div>

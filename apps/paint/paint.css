@@ -1,0 +1,45 @@
+.paint-window {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  width: 640px;
+  height: 480px;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 300;
+  transition: box-shadow 0.2s ease;
+}
+
+.paint-bar {
+  background: linear-gradient(to bottom, #0062cc, #004a99);
+  color: white;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  height: 30px;
+  user-select: none;
+  cursor: move;
+}
+
+.paint-bar span {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+}
+
+.paint-body {
+  flex: 1;
+  overflow: hidden;
+}
+
+.paint-window.active {
+  box-shadow: 0 0 14px rgba(0, 98, 204, 0.6);
+  border-color: #0062cc;
+}

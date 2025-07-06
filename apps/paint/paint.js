@@ -1,4 +1,9 @@
-import { makeWindowDraggable, makeWindowResizable } from '../../js/windowUtils.js';
+import {
+  makeWindowDraggable,
+  makeWindowResizable,
+  addToTaskbar,
+  bringToFront
+} from '../../js/windowUtils.js';
 
 export function initPaint() {
   const icon = document.getElementById('paint-icon');
@@ -9,12 +14,12 @@ export function initPaint() {
 
 export function launchPaint() {
   const windowHTML = `
-    <div id="paint-window" class="window">
-      <div class="title-bar">
+    <div id="paint-window" class="window paint-window">
+      <div class="title-bar paint-bar">
         <span>Paint</span>
         <button class="close-btn">✕</button>
       </div>
-      <div class="window-body" style="padding: 0; overflow: hidden;">
+      <div class="paint-body">
         <iframe src="https://paint.js.org/" style="width:100%; height:100%; border:none;"></iframe>
       </div>
     </div>
@@ -28,9 +33,15 @@ export function launchPaint() {
   windowEl.style.display = 'flex';
 
   makeWindowDraggable(windowEl);
+  makeWindowResizable(windowEl);
+  addToTaskbar('paint', 'assets/icons/mspaint_2.ico', windowEl);
 
   const closeBtn = windowEl.querySelector('.close-btn');
   closeBtn?.addEventListener('click', () => {
     windowEl.remove();
+
+    const taskIcon = document.querySelector(`.taskbar-icon[data-app="paint"]`);
+    if (taskIcon) taskIcon.remove();
   });
 }
+

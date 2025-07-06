@@ -15,30 +15,28 @@ export function initComputer() {
 
 export function launchComputer() {
   const windowHTML = `
-    <div class="myself-window window">
-      <div class="title-bar myself-bar">
-        <span>Myself</span>
+      <div class="window profile-window" id="profile-window">
+      <div class="title-bar profile-bar">
+        <span>My Profile</span>
         <button class="close-btn">✕</button>
       </div>
-      <div class="myself-body">
-        <img id="img-myself" src="/assets/abc.jpg" alt="My Avatar" />
+      <div class="profile-body">
+        <img src="/assets/abcd.jpg" alt="My Avatar" />
         <h3>Nguyễn Huy Hoàng</h3>
 
-        <p class="bio">
-          Hi! I’m a bla bla :))
-        </p>
+        <p class="bio">Hi! I’m a bla bla :))</p>
 
         <h4>Contact</h4>
         <ul class="link-list">
-          <li><a href="https://www.facebook.com/huyhoangisidiot/" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/huy._.hoang._/" target="_blank">Instagram</a></li>
-          <li><a href="https://github.com/HuyHoang2277" target="_blank">Github</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">GitHub</a></li>
         </ul>
 
         <h4>Học vấn</h4>
         <ul class="edu-list">
-          <li>THPT Lê Hồng Phong - Thái Nguyên</li>
-          <li>Đại học công nghiệp Hà Nội</li>
+          <li>THPT Lê Hồng Phong</li>
+          <li>Đại học Công nghiệp Hà Nội</li>
         </ul>
       </div>
     </div>
