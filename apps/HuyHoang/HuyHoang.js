@@ -21,7 +21,7 @@ export function launchComputer() {
         <button class="close-btn">✕</button>
       </div>
       <div class="profile-body">
-        <img src="/assets/abcd.jpg" alt="My Avatar" />
+        <img src="assets/abcd.jpg" alt="My Avatar" />
         <h3>Nguyễn Huy Hoàng</h3>
 
         <p class="bio">Hi! I’m a bla bla :))</p>

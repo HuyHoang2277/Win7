@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('/assets/background.jpg') center/cover no-repeat;
+  background: url('assets/background.jpg') center/cover no-repeat;
   font-family: 'Segoe UI', sans-serif;
   height: 100vh;
   overflow: hidden;
@@ -33,7 +33,7 @@ body {
   height: 48px;
   border: none;
   border-radius: 100%;
-  background: url('/assets/icons/start.png') no-repeat center center;
+  background: url('assets/icons/start.png') no-repeat center center;
   background-size: cover;
   cursor: pointer;
   position: relative;
